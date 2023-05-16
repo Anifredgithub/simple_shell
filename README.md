@@ -1,0 +1,1 @@
+This repository contains the files for Holberton simple_shell. it can be compiled using GCC and will execute a simple shell that can be used for some basic task and programs most commonly found in the bin folder
