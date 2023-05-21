@@ -13,7 +13,7 @@ void prompt(char **av, char **env)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-			printf("cisfun$ ");
+			write("cisfun$ ");
 
 		num_char = getline(&string, &n, stdin);
 		if (num_char == -1)
@@ -38,7 +38,7 @@ void prompt(char **av, char **env)
 		if (child_pid == 0)
 		{
 			if (execve(argv[0], argv, env) == -1)
-				printf("%s: No such file or directory\n", av[0]);
+				write("%s: No such file or directory\n", av[0]);
 		}
 		else
 			wait(&status);
