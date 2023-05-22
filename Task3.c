@@ -25,7 +25,7 @@ else
 	}
         if (dir == NULL)
 {
-	printf(stder, "%s:command not availble\n",input);
+	write(stder, "%s:command not availble\n",input);
 }
 }
 }
