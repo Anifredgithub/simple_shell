@@ -7,7 +7,7 @@ int main()
 
     while (exitsimple_shell)
     {
-	    printf("shell > ");
+	    write("shell > ");
 	    fget(input, sizeof(input), stdin);
 
 	    input[str(input, "\n")] = '\0';
@@ -22,6 +22,6 @@ int main()
 		   write("command not availble.\n");
 	   }
 	 }
-    printf("exit simple_shell...\n");
+    write("exit simple_shell...\n");
     exit(0);
 }
