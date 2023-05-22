@@ -19,7 +19,7 @@ int main()
 	    else
 	   {
 
-		   printf("command not availble.\n");
+		   write("command not availble.\n");
 	   }
 	 }
     printf("exit simple_shell...\n");
