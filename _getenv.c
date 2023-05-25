@@ -14,7 +14,7 @@ char *_getenv(char **environ, char *dirname)
 
 		if (_strcmp(varname, dirname))
 		{
-			final = lenght(environ[m]);
+			final = length(environ[m]);
 			free(varname);
 			return (final);
 

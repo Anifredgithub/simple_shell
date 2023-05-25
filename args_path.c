@@ -3,26 +3,26 @@
 char *args_path(char **parse, char **new)
 {
 	char *total, **cat;
-	int i, a, l;
+	int i, j, k;
 	struct stat status;
 
 	for (i = 0; new[i]; i++)
 	{
 		total = malloc(60);
-		_stract(total, new[i]);
-		_stract(total, "/");
-		_stract(total, parse[0]);
+		_strcat(total, new[i]);
+		_strcat(total, "/");
+		_strcat(total, parse[0]);
 
 		if (stat(total, &status) == 0)
 		{
-			for (l = 0; parse[l] = '\0' ; l++)
+			for (k = 0; parse[k] != NULL && *parse[k] != '\0' ; k++)
 				;
-			cat = malloc(sizeof(char *) * (l +1));
-			cat[l] = NULL;
-			cat[0] = strdup(total);
+			cat = malloc(sizeof(char *) * (k +1));
+			cat[k] = NULL;
+			cat[0] = _strdup(total);
 
-			for (a = 1; parse[a]; a++)
-				cat[a] = strdup(parse[a]);
+			for (j = 1; parse[j]; j++)
+				cat[j] = _strdup(parse[j]);
 			execute(cat);
 			return (total);
 		}

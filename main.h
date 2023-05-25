@@ -20,17 +20,17 @@ char **find_path(char **environ);
 char *_getenv(char **environ, char *dirname);
 
 /* builts-ins & execute function */
-void builtins(char *line, char **args, char **env, int *ex_st);
+void builtins(char *line, char **args, char **env, char *ex_st);
 int execute(char **parse);
 
 /* stings.c: functions related to strings */
 unsigned int _strlen(char *s);
-char *_strd(char *str);
+char *_strdup(char *str);
 int _strcmp(char *varname, char *dirname);
-char *_stract(char *dest, char *src);
+char *_strcat(char *dest, char *src);
 
 /* helpers.c: helper */
-void no_nl(char *b);
+void no_nl(char *l);
 void free_grid(char **grid, int height);
 int special_char(char *buffer, ssize_t bytes, int *ex_st);
 
@@ -48,6 +48,6 @@ char **splits(char *line, char *delim);
 char *if_exist(char **environ);
 extern char **environ;
 void *_realloc(void *ptr, unsigned int ols_size, unsigned int new_size);
-char *lenght(char *str);
+char *length(char *str);
 
 #endif
