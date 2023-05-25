@@ -15,7 +15,7 @@ char *args_path(char **parse, char **new)
 
 		if (stat(total, &status) == 0)
 		{
-			for (l = 0; parse[l] != '\0'; l++)
+			for (l = 0; parse[l] = '\0' ; l++)
 				;
 			cat = malloc(sizeof(char *) * (l +1));
 			cat[l] = NULL;

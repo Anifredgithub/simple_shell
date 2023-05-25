@@ -3,19 +3,19 @@
 int main(int argc, char **argv, char **environ)
 {
 	char *line = NULL;
-	char *deline = "\t \a\n"
-		char *command;
+	char *delim = "\t \a\n";
+	char *command;
 	char **tokens;
 	(void)argc;
 
-	token = find-path(environ);
+	tokens = find_path(environ);
 
-	signal(SIGNINT, SIG_IGN);
+	signal(SIGINT, SIG_IGN);
 	while (1)
 	{
-		line = read-line();
+		line = read_line();
 		argv = splits(line, delim);
-		command = args-path(argv, tokens);
+		command = args_path(argv, tokens);
 		if (command == NULL)
 			execute(argv);
 		free(line);
