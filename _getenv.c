@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *getenv(char **environ, char *dirname)
+char *_getenv(char **environ, char *dirname)
 {
 	int s, o;
 	char *varname, *final;
